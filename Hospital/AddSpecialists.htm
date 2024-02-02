@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Specialists</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 80vh;
+        }
+        #h1{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-style: normal;
+            color: gold;
+            padding: 10px;
+            box-shadow: inset 0px 0px 10px 5px #00786C;
+            border-radius: 5px;
+        }
+        #p1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #main-container {
+            display: flex;
+        }
+        fieldset{
+            margin: 5% auto;
+            margin: 70%;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 3px 5px 5px #4CAF50;
+            background-image: url("image/d4.jpeg");
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        form{
+            align-items: center;
+            display: flex;flex-direction: column;
+            align-items: center;
+        }
+        #btn1{
+            margin:  0 20%;
+            padding: 10px;
+            border-radius: 10px;
+            color: #101010;
+            background-color: #4CAF50;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        #btn1:hover{
+            background-color: transparent;
+            color: #101010;
+        }
+        #p2{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400;
+        }
+        #specialists-list{
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 20vh;
+            background-color: #FCF7E4;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+        <fieldset style="margin: 5% 10% 0 10%; width: 70%;">
+            <form id="signupForm">
+                <h1 id="h1">Add Specialists</h1>
+                <label for="name">Doctor </label><br>
+                <input type="text" id="name" name="name" placeholder="Enter Doctor Name" required><br>
+                <input type="text" id="name3" name="name3" placeholder="Batch No..." required><br><br>
+                <label for="name">Nurse </label><br>
+                <input type="text" id="name" name="name" placeholder="Enter Nurse Name" required><br>
+                <input type="text" id="name3" name="name3" placeholder="Batch No..." required><br>
+    <br><br>
+               <button type="button" id="btn1" onclick="handleAdd()">Add</button>
+<br><br>
+            </form>
+            <div id="specialists-list">
+
+            </div>
+           </fieldset>
+    </div>
+
+    <!---<script>
+    function handleAdd() {
+        var email = document.getElementById("email").value;
+        var phoneno = document.getElementById("phoneno").value;
+        var password1 = document.getElementById("password1").value;
+        var confirm1 = document.getElementById("confirm1").value;
+
+        // Check if all fields are filled
+        if (email && phoneno &&  password1 && confirm1) {
+            // Show an alert message for filled fields
+            alert("Password Reset Successful!");
+            setTimeout(function() {
+                window.location.href = "index.htm";
+            }, 3000);
+        } else {
+            // Show an alert for unfilled fields
+            alert("Please fill in all fields.");
+
+            // Navigate to another page after 3 seconds
+        }
+    }
+    </script>-->
+    <!--<script>
+        function handleAdd() {
+            var doctorName = document.getElementById("doctorName").value;
+            var doctorBatch = document.getElementById("doctorBatch").value;
+            var nurseName = document.getElementById("nurseName").value;
+            var nurseBatch = document.getElementById("nurseBatch").value;
+  // Check if all fields are filled
+  if (doctorName && doctorBatch && nurseName && nurseBatch) {
+    alert("Added Successfully.");
+                // Create new elements
+                var specialistInfo = document.createElement("p");
+                specialistInfo.innerHTML = "<strong>Doctor:</strong> " + doctorName + ", <strong>Batch:</strong> " + doctorBatch +
+                                           "<br><strong>Nurse:</strong> " + nurseName + ", <strong>Batch:</strong> " + nurseBatch;
+
+                // Append to the specialists list
+                document.getElementById("specialists-list").appendChild(specialistInfo);
+
+ // Clear input fields
+ document.getElementById("doctorName").value = "";
+                document.getElementById("doctorBatch").value = "";
+                document.getElementById("nurseName").value = "";
+                document.getElementById("nurseBatch").value = "";
+            } else {
+                // Show an alert for unfilled fields
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>-->
+    <script>
+        function handleAdd() {
+            var doctorName = document.getElementById("doctorName").value;
+            var doctorBatch = document.getElementById("doctorBatch").value;
+            var nurseName = document.getElementById("nurseName").value;
+            var nurseBatch = document.getElementById("nurseBatch").value;
+    
+            // Check if all fields are filled
+            if (doctorName && doctorBatch && nurseName && nurseBatch) {
+                // Create new elements
+                var specialistInfo = document.createElement("p");
+                specialistInfo.innerHTML = "<strong>Doctor:</strong> " + doctorName + ", <strong>Batch:</strong> " + doctorBatch +
+                                           "<br><strong>Nurse:</strong> " + nurseName + ", <strong>Batch:</strong> " + nurseBatch;
+    
+                // Append to the specialists list
+                document.getElementById("specialists-list").appendChild(specialistInfo);
+    
+                // Clear input fields
+                document.getElementById("doctorName").value = "";
+                document.getElementById("doctorBatch").value = "";
+                document.getElementById("nurseName").value = "";
+                document.getElementById("nurseBatch").value = "";
+    
+                // Show an alert for successful add
+                alert("Specialist added successfully!");
+            } else {
+                // Show an alert for unfilled fields
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+
+
+</body>
+</html>

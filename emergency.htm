@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        #main-container {
+            display: flex;
+            margin-top: 50%;
+            justify-content: center;
+        }
+        fieldset{
+            margin: 0;
+            border-radius: 10px;
+            box-shadow: 0px 3px 5px 5px #4CAF50;
+            padding: 20px;
+            width: 70%;
+            background-color: #00786C;
+        }
+        #emergencyBtn{
+            margin: 0 20%;
+            color: #101010;
+            background-color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #h2{
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+        input{
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+    <div id="main-container">
+        <fieldset style="margin: 5% 10% 0 10%; width: 70%;">
+            <h2 id="h2">What's Your Emergency?</h2>
+            <form id="loginForm">
+                <input type="text" id="familyField" name="familyField" placeholder="Batch NO..." required><br><br>
+                <input type="text" id="emergencyField" placeholder="Emergency Type..." required>
+               
+<br><br>
+                <button type="button" id="emergencyBtn" onclick="handleEmergency()">Emergency</button>
+            </form>
+    
+           </fieldset>
+    </div>
+
+    <!--<script>
+        // Add your JavaScript code for animations or additional functionality here
+        function handleEmergency(){
+            alert("Emergency Submitted !");
+        }
+    </script>-->
+    <script>
+        function handleEmergency() {
+            // Retrieve values from the form
+            var batchNumber = document.getElementById("familyField").value;
+            var emergencyType = document.getElementById("emergencyField").value;
+    
+            // Check if both fields are filled
+            if (batchNumber && emergencyType) {
+                // Perform any additional logic or send data to the server as needed
+                // For now, let's log the values to the console
+                console.log("Batch Number: " + batchNumber);
+                console.log("Emergency Type: " + emergencyType);
+    
+                // Show an alert message
+                alert("Emergency submitted successfully!");
+                
+                // You can add further actions based on the form values
+            } else {
+                // Show an alert if any field is empty
+                alert("Please fill in all fields before submitting the form.");
+            }
+        }
+    </script>
+
+</body>
+</html>

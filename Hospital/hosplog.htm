@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 80vh;
+            background-color: #FCF7E4;
+        }
+
+        #message-container {
+            background-color: #00786C;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 10%;
+        }
+        #h1{
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-style: normal;
+            color: #101010;
+        }
+        #p1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #main-container {
+            display: flex;
+        }
+
+        #slideshow-container {
+            flex: 1;
+            padding: 20px;
+        }
+        .slideshow-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+        }
+        fieldset{
+            margin: 5% auto;
+            margin: 70%;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 3px 5px 5px #4CAF50;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+        form{
+            align-items: center;
+            display: flex;flex-direction: column;
+            align-items: center;
+            background-color: #00786C;
+            border-radius: 5px;
+        }
+        #btn1{
+            margin:  0 20%;
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #4CAF50;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+        #btn1:hover{
+            background-color: transparent;
+            color: #101010;
+        }
+        #p2{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message-container">
+        <h1 id="h1">Welcome Health Practitioner!!</h1>
+        <p id="p1">The healthcare industry is a little different because not much marketing needs to be done for you to earn more patients. After all, health is wealth and people want to keep their health in check</p>
+    </div>
+<div>
+    <div id="slideshow-container" style="display: flex; justify-content: space-around;">
+        <!-- Add your slideshow images here -->
+        <img class="slideshow-image" src="image/hs2.jpeg" style="height: 120px;width: 120px;">
+        <img class="slideshow-image" src="image/d2.jpeg" style="height: 120px;width: 120px;">
+        <img class="slideshow-image" src="image/hs3.jpeg" style="height: 120px;width: 120px;">
+    </div>
+</div>
+    <div id="main-container">
+        <fieldset style="margin: 5% 10% 0 10%; width: 70%;">
+            <video autoplay muted loop>
+                <source src="videos/vid1.mp4" type="video/mp4">
+            </video>
+        <form id="loginForm1">
+                <label for="familyField" style="font-weight: 700;font-family: 'Times New Roman', Times, serif;">Hospital :</label><br>
+                <input type="text" id="hospitalname" name="hospitalname" placeholder="Hospital Name" required><br>
+                <input type="numberl" id="hospitalField1" name="hospitalField1" placeholder="Batch No..." required><br>
+                <input type="password" id="password3" placeholder="Password">
+    <br><br>
+               
+    <button id="btn1" type="login" onclick="handleLogin1()">LOGIN</button>
+        <p id="p2">Don't have an Account?<a href="#">SignUp</a></p><br>
+        <p id="p2">Forgot Password?<a href="resetpass.htm">Reset</a></p>
+<br><br>
+            </form>
+    
+           </fieldset>
+    </div>
+
+    <script>
+        function handleLogin1() {
+            var hospitalField = document.getElementById("hospitalField").value;
+            var hospitalname = document.getElementById("hospitalname").value;
+            var number1 = document.getElementById("number1").value;
+            var password3 = document.getElementById("password3").value;
+    
+            // Check if all fields are filled
+            if (hospitalField && hospitalname && password3 && number1 ) {
+                // Show an alert message for filled fields
+                alert("Login Successful!");
+                setTimeout(function() {
+                    window.location.href = "#";
+                }, 3000);
+            } else {
+                // Show an alert for unfilled fields
+                alert("Please fill in all fields.");
+    
+                // Navigate to another page after 3 seconds
+            }
+        }
+        </script>
+
+</body>
+</html>

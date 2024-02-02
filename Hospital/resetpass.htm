@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 80vh;
+        }
+
+        #message-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 10%;
+        }
+        #h1{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-style: normal;
+            color: #101010;
+            padding: 10px;
+            box-shadow: inset 0px 0px 10px 5px #00786C;
+            border-radius: 5px;
+        }
+        #p1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #main-container {
+            display: flex;
+        }
+        fieldset{
+            margin: 5% auto;
+            margin: 70%;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 3px 5px 5px #4CAF50;
+        }
+        form{
+            align-items: center;
+            display: flex;flex-direction: column;
+            align-items: center;
+        }
+        #btn1{
+            margin:  0 20%;
+            padding: 10px;
+            border-radius: 10px;
+            color: #101010;
+            background-color: #4CAF50;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        #btn1:hover{
+            background-color: transparent;
+            color: #101010;
+        }
+        #p2{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+        <fieldset style="margin: 5% 10% 0 10%; width: 70%;">
+            <form id="signupForm">
+                <h1 id="h1">Reset Password</h1>
+                <input type="text" id="email" name="email" placeholder="Enter Email" required><br>
+                <input type="number" id="phoneno" name="number" placeholder="+2547xxxxxxxx" required><br>
+                <input type="password" id="password1" name="password" placeholder="New Password" required><br>
+                <input type="password" id="confirm1" name="password" placeholder="Confirm Password" required><br>
+    <br><br>
+               <button type="button" id="btn1" onclick="handleReset()">Reset</button>
+        <p id="p2">Password Reset?<a href="index.htm">Reset</a></p>
+<br><br>
+            </form>
+    
+           </fieldset>
+    </div>
+
+    <script>
+    function handleReset() {
+        var email = document.getElementById("email").value;
+        var phoneno = document.getElementById("phoneno").value;
+        var password1 = document.getElementById("password1").value;
+        var confirm1 = document.getElementById("confirm1").value;
+
+        // Check if all fields are filled
+        if (email && phoneno &&  password1 && confirm1) {
+            // Show an alert message for filled fields
+            alert("Password Reset Successful!");
+            setTimeout(function() {
+                window.location.href = "index.htm";
+            }, 3000);
+        } else {
+            // Show an alert for unfilled fields
+            alert("Please fill in all fields.");
+
+            // Navigate to another page after 3 seconds
+        }
+    }
+    </script>
+
+</body>
+</html>

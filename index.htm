@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 80vh;
+        }
+
+        #message-container {
+            background-color: #00786C;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 10%;
+        }
+        #h1{
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-style: normal;
+            color: #101010;
+        }
+        #p1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #main-container {
+            display: flex;
+        }
+
+        #slideshow-container {
+            flex: 1;
+            padding: 20px;
+        }
+        .slideshow-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+        }
+        fieldset{
+            margin: 5% auto;
+            margin: 70%;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 3px 5px 5px #4CAF50;
+            background-color: #00786C;
+        }
+        form{
+            align-items: center;
+            display: flex;flex-direction: column;
+            align-items: center;
+        }
+        #btn1{
+            margin:  0 20%;
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #4CAF50;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+        #btn1:hover{
+            background-color: transparent;
+            color: #101010;
+        }
+        #p2{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400;
+        }
+        #emergencyBtn{
+            margin: 0 20%;
+            color: #101010;
+            background-color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message-container">
+        <h1 id="h1">Welcome!!</h1>
+        <p id="p1">Affordable Health For All With Home Health Solution.</p>
+            <p id="p1">Get an opportunity to interact with Health Specialists and Get Health Solutions at the comfort of your Home.</p>
+    </div>
+<div>
+    <div id="slideshow-container" style="display: flex; justify-content: space-around;">
+        <!-- Add your slideshow images here -->
+        <img class="slideshow-image" src="images/care4.jpeg" style="height: 120px;width: 120px;">
+        <img class="slideshow-image" src="images/care2.jpeg" style="height: 120px;width: 120px;">
+        <img class="slideshow-image" src="images/care1.jpeg" style="height: 120px;width: 120px;">
+    </div>
+</div>
+    <div id="main-container">
+        <!---<div id="slideshow-container">
+            <!-- Add your slideshow images here -->
+            <!---<img class="slideshow-image" src="images/care4.jpeg" style="height: 120px;width: 120px;">
+            <img class="slideshow-image" src="images/care2.jpeg" style="height: 120px;width: 120px;">
+            <img class="slideshow-image" src="images/care1.jpeg" style="height: 120px;width: 120px;">
+        </div>--->
+        <fieldset style="margin: 5% 10% 0 10%; width: 70%;">
+            <form id="loginForm">
+                <label for="familyField" style="font-weight: 700;font-family: 'Times New Roman', Times, serif;">Family :</label><br>
+                <input type="text" id="familyField" name="familyField" placeholder="Batch NO..." required><br><br>
+                <input type="password" placeholder="Password">
+    <br><br>
+               
+    <button id="btn1" type="login"><a href="familypg.htm">LOGIN</a></button>
+        <p id="p2">Don't have an Account?<a href="signupfam.htm">SignUp</a></p><br>
+        <p id="p2">Forgot Password?<a href="signupfam.htm">Reset</a></p>
+<br><br>
+                <button type="button" id="emergencyBtn" onclick="handleEmergency()"><a href="emergency.htm">Emergency</a></button>
+            </form>
+    
+           </fieldset>
+    </div>
+
+    <!--<script>
+        // Add your JavaScript code for animations or additional functionality here
+        <script>
+    function handleAdd() {
+        var doctorName = document.getElementById("doctorName").value;
+        var doctorBatch = document.getElementById("doctorBatch").value;
+        var nurseName = document.getElementById("nurseName").value;
+        var nurseBatch = document.getElementById("nurseBatch").value;
+
+        // Check if all fields are filled
+        if (doctorName && doctorBatch && nurseName && nurseBatch) {
+            // Create new elements
+            var specialistInfo = document.createElement("p");
+            var specialistInfo.innerHTML = "<strong>Doctor:</strong> " + doctorName + ", <strong>Batch:</strong> " + doctorBatch +
+                                       "<br><strong>Nurse:</strong> " + nurseName + ", <strong>Batch:</strong> " + nurseBatch;
+
+            // Append to the specialists list
+            document.getElementById("specialists-list").appendChild(specialistInfo);
+
+            // Clear input fields
+            document.getElementById("doctorName").value = "";
+            document.getElementById("doctorBatch").value = "";
+            document.getElementById("nurseName").value = "";
+            document.getElementById("nurseBatch").value = "";
+
+            // Show an alert for successful add
+            alert("Specialist added successfully!");
+        } else {
+            // Show an alert for unfilled fields
+            alert("Please fill in all fields.");
+        }
+    }
+</script>
+    </script>-->
+    <!--<script>
+        function handleLogin1() {
+            var hospitalField = document.getElementById("hospitalField").value;
+            var userType = document.getElementById("userType").value;
+            var password2 = document.getElementById("password2").value;
+    
+            // Check if all fields are filled
+            if (hospitalField && userType && password2 ) {
+                // Show an alert message for filled fields
+                alert("Login Successful!");
+                //setTimeout(function() {
+                    //window.location.href = "#";
+                //}, 3000);
+                var userRole = prompt("What is Your Emergency?");
+function handleEmergency(){
+// Navigate based on user role
+if (userRole && userRole.toLowerCase() === "doctor") {
+    window.location.href = "doctorpage.htm";
+} else if (userRole && userRole.toLowerCase() === "nurse") {
+    window.location.href = "nursepage.htm";
+} else {
+    alert("Invalid role. Please select Doctor or Nurse.");
+}
+            } }else {
+                // Show an alert for unfilled fields
+                alert("Please fill in all fields.");
+    
+                // Navigate to another page after 3 seconds
+            }
+        }
+        </script>-->
+
+</body>
+</html>
